@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul type="radio">
+        <li><span id="one">Coffee</span></li>
+        <li><span id="two">Tea</span></li>
+        <span id="three"></span>
+    </ul>
+    <script>
+        function myfunc(){
+            document.getElementById("one").style.color = "blue";
+            document.getElementById("two").style.color="red";
+            document.getElementById("one").style.fontFamily="Sofia";
+            document.getElementById("two").style.fontFamily="Roboto";
+            document.getElementById("two").style.fontStyle="italic";
+            var spanElement = document.getElementById("three");
+            spanElement.innerHTML = "<li>Water</li>";
+        }
+    </script>
+    <button name="click" onclick="myfunc()">CLICK ME!</button>
+</body>
+</html>

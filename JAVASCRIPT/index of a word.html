@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Index of Word</title>
+</head>
+<body>
+  <h1>Find Index of Word</h1>
+  <p id="output"></p>
+
+  <script>
+    function findIndex() {
+      const inputString = "Please locate where 'locate' occurs!";
+      const searchWord = "locate";
+      const index = inputString.indexOf(searchWord);
+      if (index !== -1) {
+        document.getElementById('output').textContent = `The word "${searchWord}" is found at index ${index}.`;
+      } else {
+        document.getElementById('output').textContent = `The word "${searchWord}" is not found in the string.`;
+      }
+    }
+    findIndex();
+  </script>
+</body>
+</html>

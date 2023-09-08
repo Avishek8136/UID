@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Navigator Object</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<p id="demo7"></p>
+		<script>
+			document.getElementById("demo").innerHTML = `Browser Codename:${navigator.appCodeName}`;
+			document.getElementById("demo1").innerHTML = `Browser name:${navigator.appName}`;
+			document.getElementById("demo2").innerHTML = `Browser Version:${navigator.appVersion}`;
+			document.getElementById("demo3").innerHTML = `Cookies Enabled:${navigator.CookieEnabled}`;
+			document.getElementById("demo4").innerHTML = `Browser Language:${navigator.language}`;
+			document.getElementById("demo5").innerHTML = `Browser Online:${navigator.onLine}`;
+			document.getElementById("demo6").innerHTML = `PlatFrom:${navigator.platform}`;
+			document.getElementById("demo7").innerHTML = `User-Agent Header:${navigator.userAgent}`;
+		</script>
+	</body>
+</html>			

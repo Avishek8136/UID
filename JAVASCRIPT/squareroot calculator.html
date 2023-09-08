@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Root Calculator</title>
+</head>
+<body>
+  <h1>Square Root Calculator</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="text" id="numberInput">
+  <button onclick="calculateSquareRoot()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculateSquareRoot() {
+      const numberInput = document.getElementById('numberInput').value;
+      const resultElement = document.getElementById('result');
+      const number = parseFloat(numberInput);
+      if (isNaN(number)) {
+        resultElement.textContent = 'Invalid input. Please enter a valid number.';
+        return;
+      }
+      if (number < 0) {
+        resultElement.textContent = 'Square root of a negative number is not possible.';
+        return;
+      }
+      const squareRoot = Math.sqrt(number);
+      resultElement.textContent = `Square root of ${number} is ${squareRoot}.`;
+    }
+  </script>
+</body>
+</html>

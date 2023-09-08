@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today's Date and Time</title>
+</head>
+<body>
+  <h1>Today's Date and Time</h1>
+  <p>Date is: <span id="date"></span></p>
+  <p>Time is: <span id="time"></span></p>
+
+  <script>
+    function formatTwoDigits(number) {
+      return number < 10 ? `0${number}` : `${number}`;
+    }
+
+    function displayDateTime() {
+      const now = new Date();
+      const day = now.getDate();
+      const month = now.toLocaleString('default', { month: 'long' });
+      const hours = formatTwoDigits(now.getHours());
+      const minutes = formatTwoDigits(now.getMinutes());
+      const seconds = formatTwoDigits(now.getSeconds());
+      document.getElementById('date').textContent = `${day} ${month}`;
+      document.getElementById('time').textContent = `${hours} Hours : ${minutes} Minutes : ${seconds} Seconds`;
+    }
+    displayDateTime();
+  </script>
+</body>
+</html>

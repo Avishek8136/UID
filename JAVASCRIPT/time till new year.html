@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Days Left Until Next New Year</title>
+</head>
+<body>
+  <h1>Days Left Until Next New Year</h1>
+  <p id="daysLeft"></p>
+
+  <script>
+    function calculateDaysLeft() {
+      const today = new Date();
+      const currentYear = today.getFullYear();
+      const newYearDate = new Date(currentYear+1, 0, 1);
+      const currentDate = new Date();
+      const timeDifference = newYearDate - currentDate;
+      const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+      document.getElementById('daysLeft').textContent = `Days left until the next new year: ${daysLeft} days`;
+    }
+    calculateDaysLeft();
+  </script>
+</body>
+</html>

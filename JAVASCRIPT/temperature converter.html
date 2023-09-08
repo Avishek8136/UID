@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h3>Temperature Converter</h3>
+    <script>
+        function convertToFahrenheit() {
+            const celsius = prompt("Enter temperature in degrees Celsius:");
+            
+            if (isNaN(celsius)) {
+                alert("Invalid input. Please enter a valid number.");
+            } else {
+                const fahrenheit = (celsius * 9/5) + 32;
+                alert(`${celsius} degrees Celsius is equal to ${fahrenheit.toFixed(2)} degrees Fahrenheit.`);
+            }
+        }
+        window.onload = convertToFahrenheit;
+    </script>
+</body>
+</html>

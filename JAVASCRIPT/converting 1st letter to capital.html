@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert First Letter to Capital</title>
+</head>
+<body>
+  <h1>Convert First Letter to Capital</h1>
+  <p>Input: <input type="text" id="inputString"></p>
+  <button onclick="convertToCapital()">Convert</button>
+  <p>Output: <span id="output"></span></p>
+
+  <script>
+    function convertToCapital() {
+      const inputString = document.getElementById('inputString').value;
+      if (inputString.trim() === '') {
+        document.getElementById('output').textContent = 'Please enter a string.';
+        return;
+      }
+      const convertedString = inputString.charAt(0).toUpperCase() + inputString.slice(1);
+      document.getElementById('output').textContent = convertedString;
+    }
+  </script>
+</body>
+</html>

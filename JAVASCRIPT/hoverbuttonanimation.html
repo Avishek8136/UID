@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="test.css" />
+    <title>Text Animation</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 30px;
+      background: #1d2b3a;
+    }
+
+    .inputBox input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: #47CF73;
+      border-radius: 5px;
+      outline: none;
+      color: #0000;
+      font-size: 1em;
+      transition: 0.5s;
+    }
+
+    .inputBox span {
+      position: absolute;
+      margin-left: 10px;
+      padding: 10px;
+      pointer-events: none;
+      font-size: 1em;
+      color: rgb(0, 0, 0);
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+
+    .inputBox:hover span {
+      color: rgb(0, 0, 0);
+      transform: translateX(3px) translateY(-7px);
+      font-size: 0.65em;
+      padding: 0.1px;
+      background: #47CF73;
+      border-left: 1px solid #00dfc4;
+      border-right: 1px solid #00dfc4;
+      letter-spacing: 0.2em;
+    }
+
+    .inputBox:active span {
+      transform: translateX(3px) translateY(-7px);
+      font-size: 0.65em;
+      padding: 0.1px;
+      background: #47CF73;
+      /* border-left: 1px solid #00dfc4;
+      border-right: 1px solid #00dfc4; */
+      letter-spacing: 0.2em;
+    }
+
+    .inputBox {
+      position: relative;
+      width: 10%;
+    }
+
+    #hiddenImage {
+      display: none;
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      top: 25%;
+      left: 25%;
+    }
+
+    .svg{
+        display: none;
+    }
+
+  </style>
+  <body>
+    <div class="inputBox">
+      <span>Post</span>
+      <input type="button" id="firstname" onmouseenter="showImg('hiddenImage')" onmouseleave="hideimg('hiddenImage')" onclick="document.body.style.backgroundColor='red'"/>
+      <img src="home.svg" id="hiddenImage" onmouseenter="showImg('hiddenImage')" onmouseleave="hideimg('hiddenImage')" alt="send.png" onclick="document.body.style.backgroundColor='red'" />
+    </div>
+
+    <script>
+        function showImg(imgid) {
+          document.getElementById(imgid).style.display = "block";
+        }
+
+        function hideimg(imgid) {
+          document.getElementById(imgid).style.display = "none";
+        }
+      </script>
+  </body>
+</html>

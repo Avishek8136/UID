@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Image on Hover</title>
+    <style>
+        /* Styling for the button */
+        #hoverButton {
+            padding: 10px;
+            background-image: url('normal_image.png'); /* Replace 'normal_image.png' with the URL of your normal image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="hoverButton" onmouseover="changeBackground('a.png')" onmouseout="changeBackground('normal_image.png')">Hover Me</button>
+
+    <script>
+        function changeBackground(imageUrl) {
+            const hoverButton = document.getElementById('hoverButton');
+            hoverButton.style.backgroundImage = `url('${imageUrl}')`;
+        }
+    </script>
+</body>
+</html>
