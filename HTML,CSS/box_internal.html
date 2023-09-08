@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<HTML>
+  <HEAD>
+    <TITLE>Examples of margins, padding, and borders</TITLE>
+    <STYLE type="text/css">
+    div {
+	background-color: #DDDDDD;
+	width: 400px;
+	height: 150px;
+	padding: 30px;
+	border: 10px solid #FF00FF;
+	margin: 10px;
+	}
+    </STYLE>
+</HEAD>  
+<body>
+    <h2>The Standard CSS Box Model</h2>
+
+<p>In a standard CSS box model, the height and width attribute is specified. This determines the size of the content area. If the padding, border, and margin properties are also specified, then they will be added to the width and height to calculate the total size of the element.</p>
+
+<div>This text makes up the content layer of the box. Since I've added 30px padding, 10px border, and 10px margin, the total width of the box is 500. You get that by adding the content-width, padding-left and padding-right, border-left and border-right, and margin-left and margin-right (400 + 30 + 30 + 10 + 10 + 10 + 10). The total height of the box is 250. You get that by adding the content-height, padding-top and padding-bottom, border-top and border-bottom, and margin-top and margin-bottom (150 + 30 + 30 + 10 + 10 + 10 + 10). </div>
+</body>
+</HTML>
+
+

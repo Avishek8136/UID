@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive UI Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    
+    .header {
+      text-align: center;
+      text-decoration: underline;
+      padding: 20px;
+    }
+    
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+    
+    .table-of-contents {
+      flex: 0 50%;
+      padding: 20px;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 20px;
+      border: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .main-content {
+        flex-direction: column;
+      }
+      
+      .table-of-contents {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>User Interface Design</h1>
+    </div>
+    
+    <div class="main-content">
+      <div class="table-of-contents">
+        <center><a href="courseplan.html" target="contentFrame">Course Plan</a><br><br>
+        <a href="evaluationpattern.html" target="contentFrame">Evaluation Pattern</a>
+      </div></center>
+      
+      <iframe class="content" name="contentFrame" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+</body>
+</html>
